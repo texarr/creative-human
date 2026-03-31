@@ -1,0 +1,18 @@
+---
+description: Global conventions for Nx monorepo workflows and package manager usage
+alwaysApply: true
+---
+
+# Creative Human Workspace Conventions
+
+This repository is an Nx monorepo. Follow these conventions in all tasks.
+
+- Treat this codebase as an Nx workspace and use Nx-aware project structure and terminology.
+- Prefer workspace-consistent changes that fit monorepo boundaries and shared tooling.
+- For local development guidance, use `pnpm` as the package manager.
+- For CI/CD guidance, assume pipelines use `npm`.
+- When discussing install/run steps, provide both contexts when relevant:
+  - Local example: `pnpm install`, `pnpm nx <target>`
+  - CI/CD example: `npm ci`, `npx nx <target>` (or equivalent npm-based invocation)
+- Do not run terminal commands unless the user explicitly asks for command execution.
+- If package-manager-specific commands are needed in docs or instructions, keep local and CI/CD commands clearly separated to avoid mixing `pnpm` and `npm` contexts.
